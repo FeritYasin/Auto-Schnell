@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Auto Schnell - Gebrauchtwagenhandel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #ffc107;
+            --text-color: #ffffff; /* Textfarbe für dunklen Hintergrund */
+            --background-color: #121212; /* Dunkler Hintergrund */
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        nav img {
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        /* Hero Section */
+        header {
+            text-align: center;
+            padding: 6rem 1rem;
+            background: url('https://source.unsplash.com/1600x900/?luxury-car,dealership') no-repeat center;
+            background-size: cover;
+            position: relative;
+            color: var(--text-color);
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        header h1, header p, header a {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 1.4rem;
+        }
+
+        header a {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 2rem;
+            background-color: var(--secondary-color);
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        header a:hover {
+            background-color: #e0a800;
+            transform: scale(1.1);
+        }
+
+        /* Abschnitts-Stil */
+        section {
+            padding: 4rem 1rem;
+            background: none; /* Kein Hintergrund */
+            color: var(--text-color); /* Textfarbe */
+            border: none; /* Kein Rahmen */
+            box-shadow: none; /* Kein Schatten */
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
+        .cta-button {
+            background-color: var(--secondary-color);
+            color: black;
+            font-weight: bold;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Google Maps Integration */
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-color), #003d7c);
+            color: var(--text-color);
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="container-fluid">
+        <ul>
+            <!-- Logo eingefügt -->
+            <li><img src="https://i.imgur.com/epwMJJs.png" alt="Auto Schnell Logo"></li>
+            <li><strong>Auto Schnell</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#fahrzeuge">Fahrzeuge</a></li>
+            <li><a href="#dienstleistungen">Dienstleistungen</a></li>
+            <li><a href="#kontakt" role="button">Kontakt</a></li>
+            <li><a href="#impressum">Impressum</a></li>
+            <li><a href="#agb">AGB</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header>
+        <h1>Willkommen bei Auto Schnell</h1>
+        <p>Ihr Partner für Gebrauchtwagen – Probefahrten, TÜV oder Inspektionen auf Anfrage möglich</p>
+        <a href="https://home.mobile.de/AUTOSCHNELLFUERTH" target="_blank" class="cta-button">Jetzt Fahrzeuge ansehen</a>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Fahrzeuge Section -->
+        <section id="fahrzeuge">
+            <h2>Unsere Gebrauchtwagen</h2>
+            <p>Entdecken Sie unsere große Auswahl an Gebrauchtwagen. Auf Wunsch erneuern wir den TÜV oder führen eine Inspektion durch. Probefahrten sind ebenfalls möglich – sprechen Sie uns einfach an!</p>
+            <p><a href="https://home.mobile.de/AUTOSCHNELLFUERTH" target="_blank" class="cta-button">Zu unseren Angeboten</a></p>
+        </section>
+
+        <!-- Dienstleistungen Section -->
+        <section id="dienstleistungen">
+            <h2>Unsere Dienstleistungen</h2>
+            <ul>
+                <li>Verkauf von Gebrauchtwagen</li>
+                <li>Inzahlungnahme und Ankauf von Fahrzeugen</li>
+                <li>TÜV oder Inspektion auf Anfrage</li>
+                <li>Probefahrten möglich</li>
+                <li>Fahrzeuge im Kundenauftrag verkaufen</li>
+            </ul>
+        </section>
+
+        <!-- Kontakt Section -->
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <p><strong>Adresse:</strong> Schwabacher Str. 434, 90763 Fürth</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.394529750377!2d10.989897376620283!3d49.46969637140862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f57e34bd9f0e9%3A0x486d8eb6d39e9f2c!2sSchwabacher%20Str.%20434%2C%2090763%20F%C3%BCrth!5e0!3m2!1sde!2sde!4v1618318338333" allowfullscreen="" loading="lazy"></iframe>
+            <p><strong>Telefon:</strong> +49 176 30690192</p>
+            <p><strong>E-Mail:</strong> <a href="mailto:info_autoschnell@web.de">info_autoschnell@web.de</a></p>
+        </section>
+
+        <!-- Impressum Section -->
+        <section id="impressum">
+            <h2>Impressum</h2>
+            <p><strong>Auto Schnell (Inh. Gökhan Yasin)</strong></p>
+            <p>Schwabacher Str. 434<br>90763 Fürth</p>
+            <p><strong>Telefon:</strong> +49 176 30690192</p>
+            <p><strong>Mobil:</strong> +49 176 82143887</p>
+            <p><strong>E-Mail:</strong> <a href="mailto:info_autoschnell@web.de">info_autoschnell@web.de</a></p>
+            <p><strong>USt-ID:</strong> DE235111617</p>
+        </section>
+
+        <!-- AGB Section -->
+        <section id="agb">
+            <h2>AGB</h2>
+            <p><strong>Allgemeine Geschäftsbedingungen</strong></p>
+            <ol>
+                <li><strong>Angebot und Vertragsabschluss:</strong> Unsere Angebote sind unverbindlich. Ein Vertrag kommt erst zustande, wenn wir eine Bestellung schriftlich bestätigen.</li>
+                <li><strong>Preise und Zahlungsbedingungen:</strong> Die Preise verstehen sich in Euro inklusive der gesetzlichen Mehrwertsteuer. Die Zahlung ist bei Übergabe des Fahrzeugs fällig.</li>
+                <li><strong>Eigentumsvorbehalt:</strong> Bis zur vollständigen Bezahlung bleibt das Fahrzeug unser Eigentum.</li>
+                <li><strong>Gewährleistung:</strong> Wir gewähren eine gesetzliche Gewährleistung von 12 Monaten für Gebrauchtwagen.</li>
+                <li><strong>Probefahrten:</strong> Probefahrten sind möglich, müssen jedoch im Voraus vereinbart werden.</li>
+                <li><strong>TÜV und Inspektionen:</strong> Auf Anfrage können wir den TÜV erneuern oder eine Inspektion durchführen.</li>
+                <li><strong>Datenschutz:</strong> Personenbezogene Daten werden ausschließlich für die Abwicklung der Bestellung verwendet und nicht an Dritte weitergegeben.</li>
+                <li><strong>Gerichtsstand:</strong> Der Gerichtsstand ist Fürth.</li>
+            </ol>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Auto Schnell - Alle Rechte vorbehalten</p>
+        <p><a href="#impressum">Impressum</a> • <a href="#agb">AGB</a></p>
+    </footer>
+</body>
+</html>
